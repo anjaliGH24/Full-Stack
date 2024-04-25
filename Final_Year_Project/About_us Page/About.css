@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    background-image: linear-gradient(#FFE8E8 , #FF557F );
+}
+
+footer{
+    background-color: #f81f54;
+}
+footer h2{
+    color: white;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 2.2vw;
+}
+footer p{
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+.icon i{
+    font-size: 2.5vw;
+}
+.content{
+    padding-left: 0.8vw;
+}
+.content h5{
+    font-size: 1.5vw;
+}
+#email{
+    /* margin-left: 450px; */
+    margin-left: 32vw;
+    border-left: 1px solid white;
+    padding-left: 50px;
+}
+.footer-container{
+    background-color: rgb(24, 24, 24);
+    border-top: 2px solid white;
+}
+.copyright p{
+    color: white;
+    font-size: 0.9vw;
+    letter-spacing: 0.11vw;
+    font-family: "Inter", sans-serif;
+}

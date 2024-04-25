@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 70px;
+}
+#left{
+    height: 100%;
+    width: 45%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#left h1{
+    /* font-size: 120px; */
+    font-size: 9vw;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    /* line-height: 100px; */
+    line-height: 8vw;
+    color: white;
+    padding-top: 20%;
+}
+#bottom-left{
+    height: 30%;
+    width: 100%;
+    /* background-color: black; */
+    color: white;
+}
+#colors{
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid white;
+    margin-bottom: 40px;
+}
+#colors h5{
+    /* font-size: 16px; */
+    font-size: 1.1vw;
+    margin-right: 16px;
+}
+#color1{
+    width: 15px;
+    height: 15px;
+    background-color: burlywood;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+#color2{
+    width: 15px;
+    height: 15px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+#bottom-left h4{
+    margin-bottom: 10px;
+    font-family: "Noto Sans", sans-serif;
+    /* font-size: 18px; */
+    font-size: 1.3vw;
+}
+#bottom-left p{
+    margin-bottom: 10px;
+    font-family: "Noto Sans", sans-serif;
+    /* font-size: 12px; */
+    font-size: 0.82vw;
+    /* line-height: 20px; */
+    line-height: 1.63vw;
+}
+#right{
+    height: 70%;
+    width: 22%;
+    margin-right: 90px;
+}
+#right-top{
+    /* background-color: lawngreen; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-right: 25px;
+}
+#right-top h4{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    /* font-size: 18px; */
+    font-size: 1.3vw;
+}
+#right-top h5{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+}
+#right img{
+    width: 100%;
+    height: 89.6%;
+}
+#black{
+    position : absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 79.5%;
+    border: 1px solid black;
+}
+#black h4{
+    /* font-size: 16px; */
+    font-size: 1.3vw;
+    font-family: "Noto Sans", sans-serif;
+}
+#rotate{
+    position: absolute;
+    left: 57%;
+    bottom: 0;
+    /* font-size: 30px; */
+    font-size: 2.42vw;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    rotate: -90deg;
+    transform-origin: 0 0;
+    color: white;
+}
+
+@media(max-width: 600px){
+    #main{
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 70px;
+        padding: 20px;
+    }
+    
+    #left{
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 40px;
+    }
+    #left h1{
+        font-size: 22vw;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 400;
+        line-height: 18vw;
+        color: white;
+        padding-top: 0px;
+    }
+    #bottom-left{
+        height: 30%;
+        width: 100%;
+        /* background-color: red; */
+        color: white;
+    }
+    #colors{
+        width: fit-content;
+        padding: 5px 10px 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        border: 1px solid white;
+        margin-bottom: 0px;
+    }
+    #colors h5{
+        /* font-size: 16px; */
+        font-size: 1.1vw;
+        margin-right: 16px;
+    }
+    #color1{
+        width: 15px;
+        height: 15px;
+        background-color: burlywood;
+        border-radius: 50%;
+        margin-right: 7px;
+    }
+    #color2{
+        width: 15px;
+        height: 15px;
+        background-color: whitesmoke;
+        border-radius: 50%;
+    }
+    #bottom-left h4{
+        margin-bottom: 10px;
+        font-family: "Noto Sans", sans-serif;
+        /* font-size: 18px; */
+        font-size: 1.3vw;
+    }
+    #bottom-left p{
+        margin-bottom: 10px;
+        font-family: "Noto Sans", sans-serif;
+        /* font-size: 12px; */
+        font-size: 0.82vw;
+        /* line-height: 20px; */
+        line-height: 1.63vw;
+    }
+
+}

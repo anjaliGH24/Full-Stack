@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic CSS</title>
+</head>
+<body>
+
+    <!-- Pseudo class -->
+
+<style> 
+h1{
+    position: relative;
+    width: fit-content;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    background-color: rgb(22, 113, 210);
+    width: 100%;
+    height: 4px;
+}
+h1::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    width: 50%;
+    height: 4px;
+}
+p::first-line{
+    color: blueviolet;
+    font-size: 20px;
+}
+h1::first-letter{
+    font-size: 100px;
+}
+p::selection{
+    color: rosybrown;
+    background-color: antiquewhite;
+}
+</style>    
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing.</h1>
+
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sed placeat magni nam ea eaque! Quia voluptas quibusdam aliquid ipsum quasi placeat, quisquam nihil perferendis dignissimos amet fuga recusandae, rem quos ad aut molestias fugiat exercitationem voluptatibus. Officia nulla amet corporis pariatur labore laborum totam quas numquam repudiandae praesentium doloremque, quo mollitia eaque delectus nihil quaerat, rem nisi ipsam veniam! Quasi dolores cupiditate maiores nostrum molestias, quos ratione eius eveniet. Fuga officiis a mollitia, aut natus aliquid facilis ratione. Aut et cum vitae similique animi, nesciunt odio! Repudiandae qui sunt possimus, eveniet tempore quibusdam, odit ea nulla dolorum error illo explicabo. Vitae placeat ullam temporibus laborum eaque, commodi pariatur consectetur voluptates corrupti? Cupiditate sit perspiciatis recusandae incidunt ea totam voluptate veritatis deleniti quo facilis deserunt, perferendis, doloribus libero sapiente reiciendis voluptatem ipsa commodi qui, culpa error nobis? Labore dolores laudantium possimus natus earum ea ipsa commodi veritatis consequuntur impedit voluptas, aliquam autem dolor nostrum modi voluptatem provident unde animi. Fuga magnam quasi placeat praesentium fugiat nesciunt quaerat dignissimos esse ipsa perferendis officiis, natus veritatis beatae iure voluptatum a aperiam illum aliquid voluptate. Nam aliquam perspiciatis, incidunt obcaecati harum ea magnam quibusdam repellat adipisci, ipsa fugiat delectus quod dolorem? Obcaecati, sequi.</p> 
+</body>
+</html>
