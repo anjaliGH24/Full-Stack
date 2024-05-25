@@ -4,7 +4,8 @@
 }
 html, body{
     width: 100%;
-    background-image: linear-gradient(#FFE8E8 , #FF557F );
+    background-image: linear-gradient(#FFE8E8 , #FF557F);
+    /* background-color: #605a5a; */
 }
 #main{
     height: 100%;
@@ -13,12 +14,23 @@ html, body{
 .drop2{
     color: #ed2e37;
 }
+.imglogo{
+    width: 14vw;
+    padding-left: 2vw;
+}
 .nav-link{
-    font-size: 1.1vw;
-    font-weight: 600;
+    font-size: 1vw;
+    font-weight: 500;
     font-family: "Inter", sans-serif;
     color: black;
     text-transform: uppercase;
+}
+.nav-link:hover{
+    color: #f81f54 !important;
+}
+.dropdown-item{
+    color: black;
+    font-weight: 600;
 }
 #middle{
     padding: 70px 160px 0px 160px;
@@ -53,48 +65,35 @@ html, body{
     line-height: 1.9vw;
     letter-spacing: -0.5px;
 }
-#button1{
-    margin-left: 30px;
-    background-color: white;
-    height: 3.8vw;
-    width: 13vw;
-    border-radius: 30px;
-    border: none;
-    text-transform: uppercase;
-    font-size: 1vw;
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
-    letter-spacing: 1.5px; 
-    padding-top: 8px;
+.btn{
+    margin-top: 2vw;
 }
-#button1 a{
+.herobtn1 a{
     text-decoration: none;
-    color: #ed2e37;
-}
-#button1:hover{
-    border: 2px solid white;
-    background-color: #ed2e37;
-}
-#button1 a:hover{
+    font-size: 1.1vw;
     color: white;
-}
-#button2{
-    text-transform: uppercase;
-    font-size: 1vw;
-    font-family: "Inter", sans-serif;
-    height: 3.8vw;
-    width: 13vw;
+    font-weight: 700;
+    border: 2px solid white;
+    padding: 15px 45px;
     border-radius: 30px;
-    border: none;
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-    font-weight: 800;
-    letter-spacing: 1.5px;  
 }
-#button2:hover{
-    background-color: white;
+.herobtn1 a:hover{
     color: #ed2e37;
+    background-color: white;
+}
+#herobtn2 a{
+    text-decoration: none;
+    font-size: 1.1vw;
+    color: #ed2e37;
+    background-color: white;
+    font-weight: 700;
+    border: 2px solid white;
+    padding: 15px 45px;
+    border-radius: 30px;
+}
+#herobtn2 a:hover{
+    color: white;
+    background-color:#ed2e37;
 }
 #text-wrapper{
     display: flex;
@@ -107,7 +106,6 @@ html, body{
 }
 .drop{
     color: #8b070e;
-    /* border: solid 5px; */
 }
 #text-wrapper h1{
     font-size: 1.4vw;
@@ -134,7 +132,7 @@ html, body{
 /*-------------------------- SECTION 2--------------------------*/
 .services h2 {
     text-align: center;
-    margin-top: 90px;
+    margin-top: 60px;
     text-transform: uppercase;
     font-size: 2.5vw;
     font-weight: 700;
@@ -142,7 +140,7 @@ html, body{
     color: #ed2e37;
 }
 .services-column {
-    margin: 40px 180px 0px 150px;
+    margin: 20px 180px 0px 150px;
     display: flex;
     position: relative;
 }
@@ -172,10 +170,10 @@ html, body{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .service-form {
-    width: 75%;
+    width: 77.7%;
     position: relative;
     top: -5px;
-    left: 170px;
+    left: 150px;
     background-color: #ed2e37;
     padding: 20px;
     border: 3px solid #ccc;
@@ -187,27 +185,24 @@ html, body{
     font-size: 1.5vw;
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
 }
 .service-form input {
     display: block;
-    width: 100%;
-    border-radius: 2px;    
 }
-#inputZip{
-    padding: 8px 20px;
+.zip{
+    /* padding: 8px 20px; */
     border-radius: 2px;
-    border: 2px black solid;
-    font-size: 1.3vw;
+    font-size: 1vw;
     letter-spacing: 0.9vw;
 }
 .select h6{
-    color: black;
-    font-size: 1.3vw;
+    color: white;
+    font-size: 1vw;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 12px;
-    margin-left: 6px;
+    margin-top: 10px;
+    margin-left: 3px;
 }
 .submit{
     text-transform: uppercase;
@@ -229,12 +224,16 @@ html, body{
     background-color: transparent;
 }
 #inputs{
-    color: black;
+    color: white;
     font-size: 1vw;
-    font-weight: 600;
+    font-weight: 550;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 10px;
     margin-left: 3px;
+}
+.form-check{
+    color: white;
+    font-weight: 700;
 }
 
 /*----------------------------------------Section 3-------------------------------------- */
@@ -266,24 +265,19 @@ html, body{
     font-size: 1.12vw;
     font-weight: 500;
 }
-#button3{
-    text-transform: uppercase;
-    font-size: 1vw;
-    font-family: "Inter", sans-serif;
-    height: 3.8vw;
-    width: 14vw;
-    border-radius: 30px;
-    border: none;
-    background-color: #ed2e37;
-    border: none;
+#herobtn3 a{
+    text-decoration: none;
+    font-size: 1.1vw;
     color: white;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    background-color: #ed2e37;
+    font-weight: 700;
+    padding: 20px 45px;
+    border-radius: 30px;
 }
-#button3:hover{
-    color: #ed2e37;
+#herobtn3 a:hover{
+    background-color: white;
     border: 2px solid #ed2e37;
-    background-color: transparent;
+    color:#ed2e37;
 }
 #img2{
     width: 50%;
@@ -426,6 +420,7 @@ footer p{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: solid black 2px;
     background-color: white;
     position: fixed;
     bottom: 30px;
@@ -438,9 +433,6 @@ footer p{
 }
 #arrow:hover i{
     color: white;
-}
-#arrow i{
-    padding: 10px 0px;
 }
 .arrow a {
     color: #ed2e37;
@@ -457,12 +449,17 @@ footer p{
 
 
 @media((min-width:395px) and (max-width:600px)){
+    .imglogo{
+        width: 26vw;
+        padding-left: 2vw;
+    }
     .logo img{
         height: 65px;
         width:160px
     }
     .nav-link{
-        font-size: 2.9vw;
+        font-size: 3vw;
+        padding: 0px;
     }
     #middle{
         width: 100%;
@@ -497,30 +494,30 @@ footer p{
         letter-spacing: -0.1px;
         margin-bottom: 4px;
     }
-    #button1{
-        margin-top: 0px;
-        width: 15vw;
+    .btn{
+        margin-top: -1vw;
     }
-    #button1{
-        margin-left: 10px;
-        padding: 0px 0px 0px 0px;
-    }
-    #button1 a{
-        letter-spacing: 0.5px;
-        font-size: 1.4vw;
-    }
-    #button1 a:hover{
+    .herobtn1 a{
+        text-decoration: none;
+        font-size: 2vw;
         color: white;
-        letter-spacing: 0vw;
-        font-size: 1.4vw;
+        font-weight: 700;
+        border: 2px solid white;
+        padding: 4px 10px;
+        border-radius: 30px;
     }
-    #button2{
-        margin-top: 0px;
-        letter-spacing: 0.8px;  
-        width: 15vw;
-        padding: 0px;
-        font-size: 1.4vw;
-    }    
+
+    #herobtn2 a{
+        text-decoration: none;
+        font-size: 2vw;
+        color: #ed2e37;
+        background-color: white;
+        font-weight: 700;
+        border: 2px solid white;
+        padding: 4px 10px;
+        border-radius: 30px;
+    }
+
     #img{
         display: none;
     }
@@ -542,10 +539,11 @@ footer p{
 .services-column {
     margin: 20px 8px 0px 8px;
 }
-.service-item{
+.service-item {
     width: 30%;
     font-size: 2.4vw;
     padding: 15px 0px 15px 0px;
+    text-align: center;
 }
 .service-form {
     left: 8.5px;
@@ -598,7 +596,7 @@ footer p{
     box-shadow: #ed2e382b 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 #info-main{
-    width: 80%;
+    width: 70%;
     margin-left: 0%;
     padding: 0px 0px 0px 20px;
 }
@@ -611,11 +609,10 @@ footer p{
     font-size: 1.87vw;
     margin-bottom: 2px;
 }
-#button3{
-    font-size: 1.7vw;
-    height: 5vw;
-    width: 18vw;
-    letter-spacing: 1px;
+#herobtn3 a{
+    margin-top: 2vw;
+    font-size: 2vw;
+    padding: 9px 14px;
 }
 #img2 img{
     width: 100%;
@@ -687,10 +684,10 @@ footer p{
     padding-left: 0.8vw;
 }
 .content h5{
-    font-size: 5vw;
+    font-size: 4vw;
 }
 .content h6{
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 #email{
     margin-left: 0px;

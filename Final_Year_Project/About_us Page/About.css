@@ -6,34 +6,105 @@ html, body{
     width: 100%;
     background-image: linear-gradient(#FFE8E8 , #FF557F );
 }
-
-footer{
-    background-color: #f81f54;
+.imglogo{
+    width: 14vw;
+    padding-left: 2vw;
 }
-footer h2{
+.nav-link{
+    font-size: 1vw;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: black;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: #f81f54 !important;
+}
+.dropdown-item{
+    color: black;
+    font-weight: 600;
+}
+#about{
+    background-image: url(./photo-1606206522398-de3bd05b1615.avif);
+    width: 100%;
+    height: 360px;
+}
+#box{
+    width: 100%;
+    height: 360px;
+    background-color: #2a2a2aab;
+    color: rgb(252, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#box h1{
+    font-size: 4.2vw;
+}
+#content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 90px;
+}
+#img-about{
+    width: 50%;
+}
+#img-about img{
+    border: 0.25vw solid black;
+    box-shadow: -2px 2px 0px 0px black;
+    border-radius: 8px;
+}
+#info{
+    width: 50%;
+}
+#info p{
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    color: #b40036;
+    font-weight: 600;
+}
+#info h2{
+    font-size: 3vw;
+    line-height: 4vw;
+    color: black;
+    font-weight: 700;
+}
+#info h3{
+    font-size: 1.3vw;
+    line-height: 1.99vw;
+}
+#info h4{
+    font-size: 1.7vw;
+    color: black;
+}
+.footersec{
+    width: 100% !important;
+    height: 40vh;
+    background-color: #f81f54;
+    color: white !important;
+}
+/* .footer img{
+    height: auto;
+    width: 16%;
+    margin-bottom: 20px;
+} */
+.footer h2{
     color: white;
     font-weight: 700;
     font-family: "Inter", sans-serif;
     font-size: 2.2vw;
 }
-footer p{
+.footer p{
+    color: white;
+    font-weight: 500;
+}
+.textf h4{
     font-size: 1.2vw;
-    font-weight: 600;
 }
-.icon i{
-    font-size: 2.5vw;
-}
-.content{
-    padding-left: 0.8vw;
-}
-.content h5{
-    font-size: 1.5vw;
-}
-#email{
-    /* margin-left: 450px; */
-    margin-left: 32vw;
-    border-left: 1px solid white;
-    padding-left: 50px;
+.ico i{
+    font-size: 3vw;
+    margin-right: 15px;
 }
 .footer-container{
     background-color: rgb(24, 24, 24);
@@ -45,3 +116,204 @@ footer p{
     letter-spacing: 0.11vw;
     font-family: "Inter", sans-serif;
 }
+
+@media (min-width: 320px) and (max-width: 640px) {
+    .imglogo img{
+        width: 38vw;
+    }
+    .footersec {
+        height: 200vw;
+        padding: 0px;    
+    }
+    .footer img{
+        width: 55%;
+    }
+    .ico i {
+        font-size: 8vw;
+    }
+    .textf h4 {
+        font-size: 4.5vw;
+    }
+    .footersec2 p {
+        font-size: 3.1vw;
+
+    }
+    
+    
+    #about{
+        width: 100%;
+        height: 160px;
+    }
+    #box{
+        width: 100%;
+        height: 160px;
+        background-color: #2a2a2aab;
+        color: rgb(252, 252, 252);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #box h1{
+        font-size:10vw;
+    }
+    #content{
+        display: block;
+        padding: 0px;
+    }
+    #img-about img{
+        width: 100vw;
+        margin-top: 4vw;
+    }
+    #info{
+        width: 100%;
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    #info p{
+        font-size: 8vw;
+        padding-top: 5vw;
+    }
+    #info h2{
+        font-size: 9vw;
+        line-height: 9.8vw;
+    }
+    #info h3{
+        font-size: 4.7vw;
+        line-height: 5.5vw;
+    }
+    #info h4{
+        font-size: 8vw;
+    }
+    .copyright p{
+        color: white;
+        font-size: 3vw;
+        font-weight: 700;
+        letter-spacing: 0.11vw;
+        font-family: "Inter", sans-serif;
+    }
+    .footer h2{
+        font-size: 7vw;
+    }
+    }
+    @media (min-width: 475px) and (max-width: 640px) {
+        .imglogo img{
+            width: 30vw;
+        }
+        .footersec {
+            height: 65vh;
+        }
+        .textf h4{
+            font-size: 3.2vw;
+        }
+        .ico i{
+            font-size: 5vw;
+            margin-right: 15px;
+        }
+    
+        #about{
+            width: 100%;
+            height: 360px;
+        }
+        #box{
+            width: 100%;
+            height: 360px;
+            background-color: #2a2a2aab;
+            color: rgb(252, 252, 252);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #content{
+            display: block;
+            padding: 0px 0px;
+        }
+        #img-about img{
+            width: 95vw;
+            margin-top: 4vw;
+        }
+        #info{
+            width: 100%;
+        }
+        #info p{
+            font-size: 6vw;
+            padding-top: 3vw;
+        }
+        #info h2{
+            font-size: 9vw;
+            line-height: 9.8vw;
+            color: black;
+            font-weight: 700;
+        }
+        #info h3{
+            font-size: 3vw;
+            line-height: 4.2vw;
+            font-weight: 500;
+        }
+        #info h4{
+            font-size: 6vw;
+            color: black;
+        }
+     
+    }
+    
+    @media (min-width: 475px) and (max-width: 991px) {
+
+        .footersec{
+            height: 85vw !important;
+        }
+        .imglogo img{
+            width: 30vw;
+        }
+        #about{
+            height: 260px;
+        }
+        #box{
+            height: 260px;
+            background-color: #2a2a2aab;
+            color: rgb(252, 252, 252);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #content{
+            display: block;
+            padding: 0px 0px;
+        }
+        #img-about img{
+            width: 100vw;
+            margin-top: 2vw;
+        }
+        #info{
+            width: 100%;
+        }
+        #info p{
+            font-size: 6vw;
+            padding-top: 3vw;
+        }
+        #info h2{
+            font-size: 9vw;
+            line-height: 9.8vw;
+            color: black;
+            font-weight: 700;
+        }
+        #info h3{
+            font-size: 3vw;
+            line-height: 4.2vw;
+            font-weight: 500;
+        }
+        #info h4{
+            font-size: 6vw;
+            color: black;
+        }
+          
+    }
+
+    @media((min-width:395px) and (max-width:600px)){
+        .footersec{
+            height: 130vw;
+        }
+        .nav-link{
+            font-size: 3vw;
+            line-height: 0px;
+        }
+    }

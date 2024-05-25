@@ -21,8 +21,9 @@
     <!-- scroll up button -->
 
     <link rel="stylesheet" href="./BDMS.css">
+    <link rel="icon" href="./Images/2.png">
     
-    <title>Bloody Site</title>
+    <title>PulseShare-Home</title>
 </head>
 <body>
     <div id="main">
@@ -31,9 +32,7 @@
             <nav class="navbar navbar-expand-lg bg-transparent">
                 <div class="container-fluid d-flex justify-content-between">
                     <div class="imglogo">
-                            <a class="navbar-brand logo" href="#">
-                                <img src="./Images/1.png" alt="Logo" width="250" height="80" class="d-inline-block object-fit-cover" >
-                            </a>
+                        <img src="./Images/1.png" alt="Logo" class="d-inline-block object-fit-cover imglogo" >
                     </div>
                     <div class="textnav">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,28 +41,28 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4 px-5">
                                   <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="./BDMS.html">Home</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">About us</a>
+                                    <a class="nav-link active" aria-current="page" href="./About_us Page/About.html">About us</a>
                                   </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  DONATE  </a>
+                                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> want to DONATE  </a>
                                         <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#"> Register as a donor </a></li>
-                                        <li><a class="dropdown-item" href="#"> Donate to Patient</a></li>
-                                        <li><a class="dropdown-item" href="#"> Donate at Donation Drive </a></li>
+                                        <li><a class="dropdown-item" href="#services"> Register as a donor </a></li>
+                                        <li><a class="dropdown-item" href="/D_patient/index.html"> Donate to Patient</a></li>
+                                        <li><a class="dropdown-item" href="/D_drive/index.html"> Donate at Donation Drive </a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  REQUEST  </a>
+                                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> looking for blood  </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"> Request for Blood </a></li>
-                                            <li><a class="dropdown-item" href="#"> Check nearby Donors </a></li>
+                                            <li><a class="dropdown-item" href="#services"> Request for Blood </a></li>
+                                            <li><a class="dropdown-item" href="/Check_Donor/index.html"> Check nearby Donors </a></li>
                                         </ul>
                                     </li>                                
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                                        <a class="nav-link active" aria-current="page" href="/contact/index.html">Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -84,11 +83,20 @@
                             to a healthier, brighter future for all.
                         </p>
                         
-                        <button type="button" id="button2" class="btn btn-outline-secondary">Donate Now</button>
+                        <!-- <button type="submit" onclick="fetch()" id="button2" class="btn btn-outline-secondary">Donate Now</button>
                         <button type="button" id="button1" class="btn btn-outline-secondary">
                             <a href="whatsapp://send?text=http://127.0.0.1:5500/Final_Year_Project/BDMS.html/" data-action="share/whatsapp/share"
                             target="_blank"> REFER A FRIEND </a>
-                        </button>
+                        </button> -->
+
+                        <button type="button" class="btn herobtn1">
+                          <a
+                            href="whatsapp://send?text=http://127.0.0.1:5500/Final_Year_Project/BDMS.html/"
+                            data-action="share/whatsapp/share" target="_blank"> REFER A FRIEND </a>
+          
+                          </button>
+                        <button type="button" id="herobtn2" class="btn herobtn"><a href="#services"> DONATE NOW </a></button>
+          
                     </div>                
                     <div id="img">
                         <img src="./Images/Screenshot_2024-04-01_0118091-removebg-preview.png" alt="">
@@ -101,9 +109,10 @@
                 <h1>Save life donate blood <i class="ri-drop-fill drop"></i></h1>
                 <h1>Save life donate blood <i class="ri-drop-fill drop"></i></h1>
                 <h1>Save life donate blood <i class="ri-drop-fill drop"></i></h1>
+                <h1>Save life donate blood <i class="ri-drop-fill drop"></i></h1>
             </div>
         </div>
-        
+
         <!-- 2nd Section - OUR SERVICES -->
         <div id="services">
             <div class="services">
@@ -113,138 +122,438 @@
                     <h3 class="service-item borders" data-form="form2">Request Blood</h3>
                     <h3 class="service-item borders" data-form="form3">Donor Register</h3>
                     <h3 class="service-item borders" data-form="form4">Donation Drive</h3>
+                    <h3 class="service-item borders" data-form="form5">Donate to Patient</h3>
                 </div>
             </div>
             <!-- form 1 -->
-            <div id="form1" class="service-form">
+            <form id="form1" data-action="submit" class="service-form" method="post">
                 <h3>Nearby Donors</h3>
                 <div class="select">
                     <h6>Select State</h6>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>none</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select class="form-select" id="state" aria-label="Default select example" required>
+                      <option value="">none</option>
+                          <option value="Andaman & Nicobar Islands">Andaman & Nicobar Islands</option>
+                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                          <option value="Assam">Assam</option>
+                          <option value="Bihar">Bihar</option>
+                          <option value="Chandigarh">Chandigarh</option>
+                          <option value="Chhattisgarh">Chhattisgarh</option>
+                          <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                          <option value="Daman and Diu">Daman and Diu</option>
+                          <option value="Delhi">Delhi</option>
+                          <option value="Goa">Goa</option>
+                          <option value="Gujarat">Gujarat</option>
+                          <option value="Haryana">Haryana</option>
+                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                          <option value="Jharkhand">Jharkhand</option>
+                          <option value="Karnataka">Karnataka</option>
+                          <option value="Kerala">Kerala</option>
+                          <option value="Ladakh">Ladakh</option>
+                          <option value="Lakshadweep">Lakshadweep</option>
+                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Manipur">Manipur</option>
+                          <option value="Meghalaya">Meghalaya</option>
+                          <option value="Mizoram">Mizoram</option>
+                          <option value="Nagaland">Nagaland</option>
+                          <option value="Odisha">Odisha</option>
+                          <option value="Puducherry">Puducherry</option>
+                          <option value="Punjab">Punjab</option>
+                          <option value="Rajasthan">Rajasthan</option>
+                          <option value="Sikkim">Sikkim</option>
+                          <option value="Tamil Nadu">Tamil Nadu</option>
+                          <option value="Telangana">Telangana</option>
+                          <option value="Tripura">Tripura</option>
+                          <option value="Uttarakhand">Uttarakhand</option>
+                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                          <option value="West Bengal">West Bengal</option>
                     </select>
-                </div>
-                <div class="select">
-                    <h6>Select City</h6>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>none</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                  </div>
+                  <div class="select">
+                    <h6 class="heads">Blood Group</h6>
+                    <select class="form-select" id="bloodgroup" aria-label="Default select example"required>
+                      <option value="">none</option>
+                      <option value="A+">A+</option>
+                          <option value="B+">B+</option>
+                          <option value="AB+">AB+</option>
+                          <option value="A-">A-</option>
+                          <option value="B-">B-</option>
+                          <option value="AB-">AB-</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
                     </select>
-                </div>                
-
+                  </div>
                 <div class="col-md-2 select">
                     <h6>ZIP</h6>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" class="form-control zip" id="inputZip"required>
                   </div>
-                  <button type="button" class="btn btn-outline-secondary submit">Submit</button>
-            </div>
+                  <button type="submit" class="btn btn-outline-secondary submit">Submit</button>
+                  <div class="container mt-5">
+                    <div class="row row-cols-1 row-cols-md-3 g-4" id="empty">
+                    </div>
+                  </div>
+                </form>
             
             <!-- form 2 -->
-            <div id="form2" class="service-form">
+            <form id="form2" method="post" class="service-form">
                 <h3>Blood Request Form</h3>
                 <div class="row">
                     <div class="col">
                        <h6 id="inputs">First Name</h6> 
-                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                      <input type="text" id="fname_rb" class="form-control" placeholder="First name" aria-label="First name"required>
                     </div>
                     <div class="col">
                         <h6 id="inputs">Last Name</h6>
-                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      <input type="text" id="lname_rb" class="form-control" placeholder="Last name" aria-label="Last name">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                       <h6 id="inputs">Father Name</h6> 
-                      <input type="text" class="form-control" placeholder="Father Name" aria-label="First name">
+                      <h6 id="inputs">Age</h6>
+                      <input type="text" id="age_rb" class="form-control" placeholder="Age" aria-label="Age"required>
                     </div>
                     <div class="col">
-                        <h6 id="inputs">Phone Number</h6>
-                      <input type="text" class="form-control" placeholder="Phone Number" aria-label="Last name">
+                      <h6 id="inputs">Date of Birth</h6>
+                      <input type="date" id="dob_rb" class="form-control" placeholder="dd/mm/yyyy" aria-label="DOB"required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                       <h6 id="inputs">Email Address</h6> 
-                      <input type="text" class="form-control" placeholder="Email" aria-label="First name">
+                      <h6 id="inputs">Email Address</h6>
+                      <input type="text" id="email_rb" class="form-control" placeholder="Email" aria-label="Email"required>
                     </div>
                     <div class="col">
-                        <h6 id="inputs">Phone Number</h6>
-                      <input type="text" class="form-control" placeholder="Phone Number" aria-label="Last name">
+                      <h6 id="inputs">Phone Number</h6>
+                      <input type="text" id="phone_rb" class="form-control" placeholder="Phone Number" aria-label="Phone Number"required>
                     </div>
                 </div>
-                <button type="button" class="btn btn-outline-secondary submit">Submit</button>
-                
-            </div>
+                <div class="select">
+                    <h6 class="heads">Blood Group</h6>
+                    <select class="form-select" id="blood_rb" aria-label="Default select example"required>
+                      <option value="">none</option>
+                      <option value="A+">A+</option>
+                          <option value="B+">B+</option>
+                          <option value="AB+">AB+</option>
+                          <option value="A-">A-</option>
+                          <option value="B-">B-</option>
+                          <option value="AB-">AB-</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <h6>Select State</h6>
+                    <select class="form-select" id="state_rb" aria-label="Default select example"required>
+                      <option value="">none</option>
+                          <option value="Andaman & Nicobar Islands">Andaman & Nicobar Islands</option>
+                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                          <option value="Assam">Assam</option>
+                          <option value="Bihar">Bihar</option>
+                          <option value="Chandigarh">Chandigarh</option>
+                          <option value="Chhattisgarh">Chhattisgarh</option>
+                          <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                          <option value="Daman and Diu">Daman and Diu</option>
+                          <option value="Delhi">Delhi</option>
+                          <option value="Goa">Goa</option>
+                          <option value="Gujarat">Gujarat</option>
+                          <option value="Haryana">Haryana</option>
+                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                          <option value="Jharkhand">Jharkhand</option>
+                          <option value="Karnataka">Karnataka</option>
+                          <option value="Kerala">Kerala</option>
+                          <option value="Ladakh">Ladakh</option>
+                          <option value="Lakshadweep">Lakshadweep</option>
+                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Manipur">Manipur</option>
+                          <option value="Meghalaya">Meghalaya</option>
+                          <option value="Mizoram">Mizoram</option>
+                          <option value="Nagaland">Nagaland</option>
+                          <option value="Odisha">Odisha</option>
+                          <option value="Puducherry">Puducherry</option>
+                          <option value="Punjab">Punjab</option>
+                          <option value="Rajasthan">Rajasthan</option>
+                          <option value="Sikkim">Sikkim</option>
+                          <option value="Tamil Nadu">Tamil Nadu</option>
+                          <option value="Telangana">Telangana</option>
+                          <option value="Tripura">Tripura</option>
+                          <option value="Uttarakhand">Uttarakhand</option>
+                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                          <option value="West Bengal">West Bengal</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 select">
+                    <h6>ZIP</h6>
+                    <input type="text" class="form-control zip" id="inputZip2"required>
+                  </div>
+                <button type="submit" class="btn btn-outline-secondary submit">Submit</button>
+            </form>
 
             <!-- form 3 -->
-            <div id="form3" class="service-form">
+            <form id="form3" method="post" class="service-form">
                 <h3>Registration Form</h3>
                 <div class="row">
                     <div class="col">
                        <h6 id="inputs">First Name</h6> 
-                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                      <input type="text" id="fname_dr" class="form-control" placeholder="First name" aria-label="First name" required>
                     </div>
                     <div class="col">
                         <h6 id="inputs">Last Name</h6>
-                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      <input type="text" id="lname_dr" class="form-control" placeholder="Last name" aria-label="Last name">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                        <h6 id="inputs">Father Name</h6> 
-                      <input type="text" class="form-control" placeholder="Father Name" aria-label="First name">
+                      <input type="text" id="father_dr" class="form-control" placeholder="Father Name" aria-label="Father name">
                     </div>
                     <div class="col">
                         <h6 id="inputs">Phone Number</h6>
-                      <input type="text" class="form-control" placeholder="Phone Number" aria-label="Last name">
+                      <input type="text" id="phone_dr" class="form-control" placeholder="Phone Number" aria-label="Phone number"required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                       <h6 id="inputs">Email Address</h6> 
-                      <input type="text" class="form-control" placeholder="Email" aria-label="First name">
+                      <h6 id="inputs" class="heads">Age</h6>
+                      <input type="text" id="age_dr" class="form-control" placeholder="Age" aria-label="Age"required>
                     </div>
                     <div class="col">
-                        <h6 id="inputs">Phone Number</h6>
-                      <input type="text" class="form-control" placeholder="Phone Number" aria-label="Last name">
+                      <h6 id="inputs" class="heads">Date of Birth</h6>
+                      <input type="date" id="dob_dr" class="form-control" placeholder="dd/mm/yyyy" aria-label="DOB"required>
                     </div>
-                </div>
-                <button type="button" class="btn btn-outline-secondary submit">Submit</button>
-            </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h6 id="inputs" class="heads">Email Address</h6>
+                      <input type="text" id="email_dr" class="form-control" placeholder="Email" aria-label="Email"required>
+                    </div>                    
+                      <div class="col">
+                          <div class="select">
+                            <h6 class="heads">Gender</h6>
+                            <select class="form-select" id="gender_dr" aria-label="Default select example"required>
+                              <option value="">none</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                              <option value="Other">Other</option>
+                            </select>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="select" >
+                        <h6 class="heads">Blood Group</h6>
+                        <select class="form-select" id="blood_dr" aria-label="Default select example"required>
+                          <option value="">none</option>
+                              <option value="A+">A+</option>
+                              <option value="B+">B+</option>
+                              <option value="AB+">AB+</option>
+                              <option value="A-">A-</option>
+                              <option value="B-">B-</option>
+                              <option value="AB-">AB-</option>
+                              <option value="O+">O+</option>
+                              <option value="O-">O-</option>
+                        </select>
+                      </div>
+                    </div>                    
+                      <div class="col">
+                        <div class="select">
+                          <h6 class="heads">Select State</h6>
+                          <select class="form-select" id="state_dr" aria-label="Default select example"required>
+                            <option value="">none</option>
+                                <option value="Andaman & Nicobar Islands">Andaman & Nicobar Islands</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="West Bengal">West Bengal</option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-2 select">
+                    <h6 class="heads">ZIP</h6>
+                    <input type="text" class="form-control zip" id="inputZip3" required>
+                  </div>
+                <button type="submit" class="btn btn-outline-secondary submit">Submit</button>
+            </form>
 
             <!-- form 4 -->
-            <div id="form4" class="service-form">
-                <h3>Blood Drives</h3>
+            <form id="form4" method="post" class="service-form">
+                <h3>Blood Donation Drives</h3>
                 <div class="select">
                     <h6>Select State</h6>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>none</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select class="form-select" id="state_dd" aria-label="Default select example"required>
+                      <option value="">none</option>
+                          <option value="Andaman & Nicobar Islands">Andaman & Nicobar Islands</option>
+                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                          <option value="Assam">Assam</option>
+                          <option value="Bihar">Bihar</option>
+                          <option value="Chandigarh">Chandigarh</option>
+                          <option value="Chhattisgarh">Chhattisgarh</option>
+                          <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                          <option value="Daman and Diu">Daman and Diu</option>
+                          <option value="Delhi">Delhi</option>
+                          <option value="Goa">Goa</option>
+                          <option value="Gujarat">Gujarat</option>
+                          <option value="Haryana">Haryana</option>
+                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                          <option value="Jharkhand">Jharkhand</option>
+                          <option value="Karnataka">Karnataka</option>
+                          <option value="Kerala">Kerala</option>
+                          <option value="Ladakh">Ladakh</option>
+                          <option value="Lakshadweep">Lakshadweep</option>
+                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Manipur">Manipur</option>
+                          <option value="Meghalaya">Meghalaya</option>
+                          <option value="Mizoram">Mizoram</option>
+                          <option value="Nagaland">Nagaland</option>
+                          <option value="Odisha">Odisha</option>
+                          <option value="Puducherry">Puducherry</option>
+                          <option value="Punjab">Punjab</option>
+                          <option value="Rajasthan">Rajasthan</option>
+                          <option value="Sikkim">Sikkim</option>
+                          <option value="Tamil Nadu">Tamil Nadu</option>
+                          <option value="Telangana">Telangana</option>
+                          <option value="Tripura">Tripura</option>
+                          <option value="Uttarakhand">Uttarakhand</option>
+                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                          <option value="West Bengal">West Bengal</option>
+                    </select>
+                </div>
+                <div class="row">
+                  <div class="col">
+                      <div class="select">
+                        <h6 class="heads">Category</h6>
+                        <select class="form-select" id="category_dd" aria-label="Default select example"required>
+                          <option value="">none</option>
+                          <option value="Government">Government</option>
+                          <option value="Private">Private</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <h6 id="inputs" class="heads">Date of Donation</h6>
+                    <input type="date" id="dod_dd" class="form-control" placeholder="dd/mm/yyyy" aria-label="Date of Donation"required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-outline-secondary submit">Submit</button>
+                <div class="container mt-5">
+                  <div class="row row-cols-1 row-cols-md-3 g-4" id="empty2">
+                  </div>
+                </div>
+              </form>
+
+            <!-- form 5 -->
+            <form id="form5" method="post" class="service-form">
+                <h3>Donate to Patient</h3>
+                <div class="select">
+                    <h6>Select State</h6>
+                    <select class="form-select" id="state_dp" aria-label="Default select example"required>
+                      <option value="">none</option>
+                          <option value="Andaman & Nicobar Islands">Andaman & Nicobar Islands</option>
+                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                          <option value="Assam">Assam</option>
+                          <option value="Bihar">Bihar</option>
+                          <option value="Chandigarh">Chandigarh</option>
+                          <option value="Chhattisgarh">Chhattisgarh</option>
+                          <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                          <option value="Daman and Diu">Daman and Diu</option>
+                          <option value="Delhi">Delhi</option>
+                          <option value="Goa">Goa</option>
+                          <option value="Gujarat">Gujarat</option>
+                          <option value="Haryana">Haryana</option>
+                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                          <option value="Jharkhand">Jharkhand</option>
+                          <option value="Karnataka">Karnataka</option>
+                          <option value="Kerala">Kerala</option>
+                          <option value="Ladakh">Ladakh</option>
+                          <option value="Lakshadweep">Lakshadweep</option>
+                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Manipur">Manipur</option>
+                          <option value="Meghalaya">Meghalaya</option>
+                          <option value="Mizoram">Mizoram</option>
+                          <option value="Nagaland">Nagaland</option>
+                          <option value="Odisha">Odisha</option>
+                          <option value="Puducherry">Puducherry</option>
+                          <option value="Punjab">Punjab</option>
+                          <option value="Rajasthan">Rajasthan</option>
+                          <option value="Sikkim">Sikkim</option>
+                          <option value="Tamil Nadu">Tamil Nadu</option>
+                          <option value="Telangana">Telangana</option>
+                          <option value="Tripura">Tripura</option>
+                          <option value="Uttarakhand">Uttarakhand</option>
+                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                          <option value="West Bengal">West Bengal</option>
                     </select>
                 </div>
                 <div class="select">
-                    <h6>Select City</h6>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>none</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <h6 class="heads">Blood Group</h6>
+                    <select class="form-select" id="blood_dp" aria-label="Default select example"required>
+                      <option value="">none</option>
+                      <option value="A+">A+</option>
+                          <option value="B+">B+</option>
+                          <option value="AB+">AB+</option>
+                          <option value="A-">A-</option>
+                          <option value="B-">B-</option>
+                          <option value="AB-">AB-</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
                     </select>
-                </div>                
-
+                </div>
                 <div class="col-md-2 select">
-                    <h6>ZIP</h6>
-                    <input type="text" class="form-control" id="inputZip">
+                    <h6 class="heads">ZIP</h6>
+                    <input type="text" class="form-control" id="inputZip5"required>
+                </div>
+                <button type="submit" class="btn btn-outline-secondary submit">Submit</button>
+                <div class="container mt-4">
+                  <div class="row row-cols-1 row-cols-md-3 g-4" id="empty3">
+            
                   </div>
-                  <button type="button" class="btn btn-outline-secondary submit">Submit</button>
-            </div>
+                </div> 
+            </form>
         </div>
 
         <!-- Section 3 -->
@@ -254,7 +563,7 @@
                 <p>By donating blood, you become a lifeline for those in need, offering hope, healing, and a chance at life. Your generosity transforms moments of crisis
                 into opportunities for survival, underscoring the invaluable difference every donor makes in the lives of others. Join us in this noble 
                 endeavor, where each donation is a testament to the power of compassion and humanity, making a lasting difference one drop at a time.</p>
-                <button id="button3">Donate Now</button>
+                <button type="button" id="herobtn3" class="btn herobtn"><a href="#services"> DONATE NOW </a></button>
             </div>
             
             <div id="img2">
@@ -340,12 +649,12 @@
         </div>
 
         <!-- Section 6 - Footer -->
-        <footer class="text-white pt-5 pb-4 mt-5">
+        <footer id="footer" class="text-white pt-5 pb-4 mt-5">
             <div class="container">
                 <div class="col text-md-left">
                     <div class="col-md col-lg col-xl mt-1 ps-5 pe-5">
                         <!-- <img src="./Images/1.1.png" width="200px" alt=""> -->
-                        <h2>LIFESAVER</h2>
+                        <h2>PulseShare</h2>
                         <p>Join us in making a difference one drop at a time. Your blood donation has the power to save lives, bring hope to families, and support communities in times of need. By donating blood, you become a vital part of a lifesaving network, impacting lives positively and contributing to a healthier, brighter future for all.</p>
                     </div>
                     <div class="row-md-2 row-lg-2 row-xl-2 mt-5 ps-5 pe-5 d-flex phone " >
@@ -401,7 +710,7 @@
 
 
 <script>
-    // Scroll-up Js
+    // // Scroll-up Js
     $(window).scroll(function () {
         var sc = $('#arrow'),
         scroll = $(window).scrollTop();
@@ -450,6 +759,306 @@
                 });
             });
         });
+
+
+//--------------backend---------------
+// check-donor
+const data=document.getElementsByClassName('service-form')[0];
+data.addEventListener('submit', fetching);
+    function fetching(e) {
+      e.preventDefault();
+      const info1 = document.getElementById("state").value;
+      const info2 = document.getElementById("bloodgroup").value;
+      const info3 = document.getElementById("inputZip").value;
+
+      console.log(info1, info2, info3);
+
+      async function fetchdata() {
+        const url = 'http://localhost:3000/donor'
+        const response = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify({
+            state_cd: info1,
+            blood_cd: info2,
+            zip_cd: info3,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
+        });
+
+        const output= document.getElementById('empty');
+        const responseData = await response.json();
+        let html = "";
+        if ( responseData.message === "success") {
+          responseData.Response.forEach(({ first_name, last_name, phone, age, gender, blood }) => {
+            html += `
+                <div class="col">
+                    <div class="card h-100" style="max-width: 800px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 ps-3 d-flex justify-content-center align-items-center">
+                                <img src="/Sample_User_Icon.png" class="img-fluid cardimg" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Blood Group : ${blood} </h5>
+                                    <p class="card-text">Name : ${first_name} ${last_name} <br>
+                                        Number : ${phone} <br>
+                                        Age : ${age} <br>
+                                        Gender : ${gender}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+          });
+          output.innerHTML = html;
+        } else {
+          html = `
+              <div class="alert alert-info" role="alert">
+                ${responseData.Response ? responseData.Response : responseData.message}
+              </div>
+          `;
+          output.innerHTML = html;
+        }
+      }
+      fetchdata();
+    }
+
+//request blood
+const data2=document.getElementById('form2');
+data2.addEventListener('submit',fetching2);
+
+function fetching2(e) {
+  e.preventDefault();
+  const info1=document.getElementById('fname_rb').value;
+  const info2=document.getElementById('lname_rb').value;
+  const info3=document.getElementById('age_rb').value;
+  const info4=document.getElementById('dob_rb').value;
+  const info5=document.getElementById('email_rb').value;
+  const info6=document.getElementById('phone_rb').value;
+  const info7=document.getElementById('blood_rb').value;
+  const info8=document.getElementById('state_rb').value;
+  const info9=document.getElementById('inputZip2').value;
+  
+  console.log(info1,info2,info3,info7,info8,info9);
+  async function fetchdata(){
+    const url='http://localhost:3000/requestblood'
+    const response= await fetch(url,{
+      method:'POST',
+      body:JSON.stringify({
+      fname:info1,
+      lname:info2,
+      age:info3,
+      dob:info4,
+      email:info5,
+      phone:info6,  
+      blood_rb: info7,
+      state_rb: info8,
+      zip_rb: info9,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+    });
+    if (response.ok) {
+      alert('Patient has been registered successfully!');
+    } else {
+      alert('Error registering donor. Please try again.');
+    }
+
+  }
+  fetchdata();
+}
+
+//donor register
+const data3=document.getElementById('form3');
+data3.addEventListener('submit',fetching3);
+
+function fetching3(e) {
+  e.preventDefault();
+  const info1=document.getElementById('fname_dr').value;
+  const info2=document.getElementById('lname_dr').value;
+  const info3=document.getElementById('father_dr').value;
+  const info4=document.getElementById('phone_dr').value;
+  const info5=document.getElementById('age_dr').value;
+  const info6=document.getElementById('dob_dr').value;
+  const info7=document.getElementById('gender_dr').value;
+  const info8=document.getElementById('email_dr').value;
+  const info9=document.getElementById('blood_dr').value;
+  const info10=document.getElementById('state_dr').value;
+  const info11=document.getElementById('inputZip3').value;
+  
+  console.log(info1,info2,info3,info7,info8,info9);
+  
+  async function fetchdata(){
+    const url='http://localhost:3000/donorregister'
+    const response= await fetch(url,{
+      method:'POST',
+      body:JSON.stringify({
+      fname_dr:info1,
+      lname_dr:info2,
+      father_dr:info3,
+      phone_dr:info4,
+      age_dr:info5,
+      dob_dr:info6,
+      gender_dr:info7,
+      email_dr:info8,  
+      blood_dr: info9,
+      state_dr: info10,
+      zip_dr: info11,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+    });  
+    if (response.ok) {
+      alert('Donor has been registered successfully!');
+    } else {
+      alert('Error registering donor. Please try again.');
+    }
+
+  }
+  fetchdata();
+}
+
+// donation drive
+const data4=document.getElementById('form4');
+data4.addEventListener('submit',fetching4);
+
+ function fetching4(e){
+  e.preventDefault();
+  const info1=document.getElementById('state_dd').value;
+  const info2=document.getElementById('dod_dd').value;
+  const info3=document.getElementById('category_dd').value;
+
+  console.log(info1,info2,info3);
+  
+  async function fetchdata(){
+    const url = 'http://localhost:3000/donationdrive'
+        const response = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify({
+            state_dd: info1,
+            category_dd: info3,
+            dod_dd: info2,
+          }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+    });
+    
+    const output= document.getElementById('empty2');
+        const responseData = await response.json();
+        let html = "";
+        if ( responseData.message === "success") {
+          responseData.Response.forEach(({ bb_name, contact, dod, address, pincode }) => {
+            html += `
+            <div class="col">
+                    <div class="card h-100" style="max-width: 800px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 ps-3 d-flex justify-content-center align-items-center">
+                                <img src="/5979793.png" class="img-fluid cardimg" alt="...">
+                            </div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <h5 class="card-title">${bb_name} </h5>
+                                    <p class="card-text"><br>
+                                        Contact : ${contact} <br>
+                                        Address : ${address} <br>
+                                        Pincode : ${pincode}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+          });
+          output.innerHTML = html;
+        } else {
+          html = `
+              <div class="alert alert-info" role="alert">
+                ${responseData.Response ? responseData.Response : responseData.message}
+              </div>
+          `;
+          output.innerHTML = html;
+        }
+  }
+  fetchdata();
+}
+
+//donate to patient
+const data5=document.getElementById('form5');
+data5.addEventListener('submit', fetching5);
+
+    function fetching5(e) {
+      e.preventDefault();
+      const info1 = document.getElementById('state_dp').value;
+      const info2 = document.getElementById('blood_dp').value;
+      const info3 = document.getElementById('inputZip5').value;
+
+      console.log(info1, info2, info3);
+
+      async function fetchdata() {
+        const url = 'http://localhost:3000/donatepatient'
+        const response = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify({
+            state: info1,
+            blood: info2,
+            zip: info3,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
+        });
+
+        const output= document.getElementById('empty3');
+        const responseData = await response.json();
+        let html = "";
+        if ( responseData.message === "success") {
+          responseData.Response.forEach(({first_name, last_name, phone, age, blood}) => {
+            html += `
+                <div class="col">
+                    <div class="card h-100" style="max-width: 800px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 ps-3 d-flex justify-content-center align-items-center">
+                                <img src="/Sample_User_Icon.png" class="img-fluid cardimg" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Blood Group : ${blood} </h5>
+                                    <p class="card-text">Name : ${first_name} ${last_name} <br>
+                                        Contact : ${phone} <br>
+                                        Age : ${age} <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+          });
+          output.innerHTML = html;
+        } else {
+          html = `
+              <div class="alert alert-info" role="alert">
+                ${responseData.Response ? responseData.Response : responseData.message}
+              </div>
+          `;
+          output.innerHTML = html;
+        }
+
+
+      }
+      fetchdata();
+    }
+
+
+
 </script>
     
 </body>
